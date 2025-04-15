@@ -1,4 +1,4 @@
-OpenGL experiment on 3D rendering.
+OpenGL experiment on 3D rendering. It uses LWJGL3 and Slick-Util to load the textures.
 
 Graphical simulation of gravity effects on massive objects (without using precise values).
 

@@ -13,13 +13,16 @@ uniform mat4 projection;
 uniform vec4 entities[100];
 uniform int entCount;
 
+#define G 0.0000001
+
 float getDistance(float x1, float y1, float x2, float y2)
 {
     return pow(x1 - x2, 2) + pow(y1 - y2, 2);
 }
 float deformation(float distance, float mass, float radius)
 {
-    return (-mass * pow(2.72, -(distance + radius) / 2.2));
+    // return (-mass * pow(2.72, -(distance + radius) / 2.2));
+    return -G * mass / pow(distance + radius, 2);
 }
 vec4 vertexResult(vec3 pos)
 {
